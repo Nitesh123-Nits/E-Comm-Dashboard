@@ -1,13 +1,167 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: aliceblue;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: dashed;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 1rem;
+  color: aliceblue;
+}
+
+.nav {
+  background-color: rgb(3, 3, 44);
+  color: aliceblue;
+  margin: 0;
+  width: 100%;
+
+}
+
+.nav.left {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-right: clamp(1rem, 5vw, 2rem);
+}
+
+.nav a {
+  color: aliceblue
+}
+
+.nav a:hover {
+  color: papayawhip;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(3, 3, 44);
+  color: aliceblue;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+.form-container {
+  background-color: rgb(194, 215, 249);
+  min-height: 60vh;
+  max-width: 700px;
+  min-width: 400px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  text-align: center;
+  place-content: center;
+}
+
+.form-container input {
+  padding: .8rem;
+  margin: 1rem;
+
+}
+
+.form-container input {
+  display: flex;
+}
+
+.form button {
+  padding: 1rem;
+  border: 0;
+  background-color: rgb(4, 4, 53);
+  color: aliceblue;
+  width: 12rem;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.form button:hover {
+  background-color: rgb(8, 8, 141);
+}
+
+.form {
+  padding: 1rem;
+}
+
+.product {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  min-width: 400px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.product input {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.product button {
+  padding: 1rem;
+  border: 0;
+  width: 95%;
+  margin: auto;
+  margin-top: 1rem;
+  color: aliceblue;
+  background-color: rgb(11, 11, 63);
+}
+
+.product .invalid-input {
+  color: red;
+  text-align: left;
+  margin-left: 1rem;
+
+}
+
+.product-list {
+  padding: 2rem;
+  border: 1px solid #435;
+  width: 95%;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.product-list li {
+  border: 2px solid #455;
+  padding: 1rem;
+  display: inline-block;
+  width: 120px;
+}
+
+.product-list input {
+  padding: 1rem;
+  width: 80%;
+  margin-bottom: .6rem;
+  display: inline-block;
+}
+
+/* li:has(.delete-btn) {
+  background-color: red;
+} */
+
+.delete-btn {
+  border: 0;
+  /* padding: .3rem; */
+  color: red;
+  width: 100%;
+  background-color: transparent;
 }

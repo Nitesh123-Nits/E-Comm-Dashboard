@@ -1,0 +1,104 @@
+// var mysql      = require('mysql');
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : 'secret',
+//   database : 'E-Com'
+// });
+ 
+// connection.connect();
+ 
+// connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+//   if (error) throw error;
+//   console.log('The solution is: ', results[0].solution);
+// });
+ 
+// connection.end();
+
+
+
+
+
+
+
+// const mongoose = require('mongoose');
+// const express = require('express');
+// const multer=require('multer')
+// const os=require('os');
+// const app = express();
+// const EventEmiiter=require('events');
+// const event=new EventEmiiter();
+// app.use(express.json())
+// require('./config')
+// const Employee=require('./employee');
+// const e = require('express');
+// app.use(express.json());
+
+// OS information
+// console.log(os.userInfo(),os.arch(),os.freemem()/(1024*1024*1024),os.totalmem()/(1024*1024*1024),os.hostname(),os.platform())
+
+
+// File uploading
+// const upload = multer({
+//   storage: multer.diskStorage({
+//       destination: function (req, file, cb) {
+//           cb(null, 'uploads')
+//       },
+//       filename: function (req, file, cb) {
+//           cb(null, file.fieldname + "-" + Date.now() + ".png")
+//       }
+//   })
+// }).single('image');
+
+
+// app.post("/upload", upload, (req, resp) => {
+//   resp.send("file upload")
+// });
+
+
+// app.get("/search/:key",async (req,resp)=>{
+//     let data = await Employee
+//     .find(
+//         {
+//             "$or":[
+//                 {name:{$regex:req.params.key}},
+//                 {brand:{$regex:req.params.key}}
+//             ]
+//         }
+//     )
+//     resp.send(data);
+// })
+
+
+// app.post('/create',async (req,resp)=>{
+//   let data=new Employee(req.body)
+//   let result=await data.save()
+//   console.log(result)
+//   resp.send("Hi")
+// })
+
+
+// app.get('/list',async (req,resp)=>{
+//   let data=await Employee.find();
+//   resp.send(data)
+// })
+
+
+// app.delete("/delete/:_id", async (req, resp) => {
+//   console.log(req.params)
+//   let data = await Employee.deleteOne(req.params);
+//   resp.send(data);
+// })
+
+
+// app.put("/update/:_id",async (req, resp) => {
+//   console.log(req.params)
+//   let data = await Employee.updateOne(
+//       req.params,
+//       {$set: req.body}
+//   );
+//   resp.send(data);
+// })
+
+
+// app.listen(3000)
